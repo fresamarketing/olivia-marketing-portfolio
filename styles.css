@@ -396,3 +396,61 @@ h1,h2,h3,p { margin-top:0; }h1,h2 { font-family:"Playfair Display",Georgia,serif
   .luma-card-grid,.luma-definition-grid,.luma-objective-grid,.luma-score-grid,.luma-property-grid,.luma-timeline,.luma-sms-examples,.luma-split { grid-template-columns:1fr; }
   .luma-facts div { grid-template-columns:1fr; gap:6px; }
 }
+
+@media (max-width:760px) {
+  .project-grid {
+    gap:22px;
+  }
+
+  .project-card,
+  .project-card-detailed {
+    display:flex;
+    flex-direction:column;
+    padding:18px;
+    min-height:auto;
+  }
+
+  .project-card:hover {
+    transform:none;
+    box-shadow:none;
+  }
+
+  .project-index,
+  .project-card-detailed .project-index {
+    grid-row:auto;
+    margin:0 0 14px;
+  }
+
+  .project-image,
+  .project-empty {
+    grid-column:auto;
+    width:100%;
+    aspect-ratio:16 / 10;
+    margin:0 0 18px;
+  }
+
+  .project-card h3,
+  .project-card > p,
+  .project-card > p:last-child,
+  .project-button {
+    grid-column:auto;
+  }
+
+  .project-card > p:not(.project-index),
+  .project-card-detailed > p:not(.project-index) {
+    width:100%;
+    font-size:14px;
+    line-height:1.55;
+    margin:0 0 14px;
+  }
+
+  .project-button {
+    align-self:flex-start;
+    width:auto;
+    max-width:100%;
+    min-height:0;
+    margin-top:auto;
+    padding:11px 15px;
+    white-space:nowrap;
+  }
+}
